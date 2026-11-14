@@ -1,0 +1,41 @@
+#!/bin/sh
+# metal-shim on|off|status  (run with sudo for on/off). BIM 14/11/2026, Damian: "use it by default so that app in vms ... can actually use it".
+# Default-on Cua Metal capability shim for a macOS GUEST VM: every non-hardened process that loads Metal sees Apple GPU family 9 +
+# 64 KB threadgroup memory, when started from zsh (/etc/zshenv). Limits: launchd drops DYLD_* (Dock/Finder apps never get it);
+# SIP purges it when a protected binary (/bin/sh, bash, /usr/bin/python3, make) is exec'd, so prefix with metal-fast there. Apple/hardened apps ignore DYLD_* (SIP), so system apps and notarized apps (BIM VPN) are untouched.
+# TRAP: a DYLD_INSERT_LIBRARIES path that does not exist kills every process -> each hook below checks the file first, and "off"
+# never deletes the dylib. Never run this on a bare-metal Mac (no gain there).
+set -eu
+LIB=/usr/local/lib/LumeMetalCapabilities.dylib
+SRC_LIB=${METAL_SHIM_DYLIB:-$(dirname "$0")/dist/LumeMetalCapabilities-lazy.dylib}
+PLIST=/Library/LaunchAgents/com.bim.metal-shim.plist
+ZENV=/etc/zshenv
+BEGIN='# >>> metal-shim (BIM) >>>'; END='# <<< metal-shim (BIM) <<<'
+ENVLINE='[ -f /usr/local/lib/LumeMetalCapabilities.dylib ] && export DYLD_INSERT_LIBRARIES=/usr/local/lib/LumeMetalCapabilities.dylib LUME_METAL_APPLE_FAMILY_MAX=1009'
+U=${SUDO_UID:-$(id -u)}
+
+strip_block() { [ -f "$ZENV" ] && awk -v b="$BEGIN" -v e="$END" '$0==b{s=1;next} $0==e{s=0;next} !s' "$ZENV" > "$ZENV.tmp" && cat "$ZENV.tmp" > "$ZENV" && rm -f "$ZENV.tmp"; return 0; }
+guiset() { launchctl asuser "$U" launchctl "$@" 2>/dev/null || true; }
+
+case "${1:-status}" in
+on)
+  [ "$(id -u)" = 0 ] || { echo "run with sudo"; exit 1; }
+  sysctl -n kern.hv_vmm_present | grep -q 1 || { echo "refused: not a VM (bare metal gains nothing)"; exit 2; }
+  install -d -m 755 /usr/local/lib
+  install -m 755 -o root -g wheel "$SRC_LIB" "$LIB.new" && mv -f "$LIB.new" "$LIB"
+  DYLD_INSERT_LIBRARIES=$LIB LUME_METAL_APPLE_FAMILY_MAX=1009 /usr/bin/true || { echo "dylib does not load; nothing enabled"; exit 3; }
+  strip_block; [ -f "$ZENV" ] && cp -p "$ZENV" "$ZENV.bak-$(date +%Y%m%d-%H%M%S)-metal-shim" || true
+  printf '%s\n%s\n%s\n' "$BEGIN" "$ENVLINE" "$END" >> "$ZENV"
+  rm -f "$PLIST"   # launchd drops DYLD_* from setenv (tested 14/11/2026): no GUI-session hook is possible
+  echo "on: every zsh shell / ssh command from now on, and the non-hardened programs they start" ;;
+off)
+  [ "$(id -u)" = 0 ] || { echo "run with sudo"; exit 1; }
+  strip_block; rm -f "$PLIST"
+  guiset unsetenv DYLD_INSERT_LIBRARIES; guiset unsetenv LUME_METAL_APPLE_FAMILY_MAX
+  echo "off (dylib kept at $LIB on purpose: removing it while a process still has the variable would kill that process)" ;;
+status)
+  printf 'dylib: '; [ -f "$LIB" ] && shasum -a 256 "$LIB" | cut -c1-16 || echo missing
+  printf 'zshenv: '; grep -qF "$BEGIN" "$ZENV" 2>/dev/null && echo on || echo off
+  printf 'this shell: '; echo "${DYLD_INSERT_LIBRARIES:-not set}" ;;
+*) echo "usage: metal-shim on|off|status"; exit 1 ;;
+esac
