@@ -1,0 +1,9 @@
+{
+  "name": "qwen35-4b-3d-coders-runner",
+  "private": true,
+  "description": "Headless render + GLB export check for pages written by the Qwen3.5-4B 3D coders",
+  "dependencies": {
+    "puppeteer": "25.16.0",
+    "three": "0.160.0"
+  }
+}
