@@ -12,6 +12,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [thermite](thermite/) |  | 64-thread x86-64 CPU | partly |
 | [autoresearch-mlx](autoresearch-mlx/) | Native Apple Silicon MLX port of Karpathy's autoresearch | Apple M4 Mac mini | works |
 | [icloud-s3](icloud-s3/) | Rust tool to sync or backup iCloud data to Amazon S3 | 64-thread x86-64 CPU | works |
+| [qwen4-open-weight-models](qwen4-open-weight-models/) | Open-weight Qwen4 LLM weights likely for local/self-hosted inference. | 1x NVIDIA V100 32 GB | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
