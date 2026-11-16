@@ -10,6 +10,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [metal-capability-layer-for-macos-vms](metal-capability-layer-for-macos-vms/) | Process-scoped Metal capability layer enabling GPU acceleration for AI models on | Apple M5 Max MacBook Pro, macOS guest VM | works |
 | [apple-neural-engine-training-compiler](apple-neural-engine-training-compiler/) | Compiler and framework enabling neural network training on Apple Neural Engine ( | Apple M4 Mac mini | works |
 | [thermite](thermite/) |  | 64-thread x86-64 CPU | partly |
+| [autoresearch-mlx](autoresearch-mlx/) | Native Apple Silicon MLX port of Karpathy's autoresearch | Apple M4 Mac mini | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
