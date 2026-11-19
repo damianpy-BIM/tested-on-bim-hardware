@@ -25,6 +25,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [imagination-studio](imagination-studio/) | All-in-one creative studio with 61+ integrated apps for video, music, audio, vis | 1x NVIDIA Tesla V100 32 GB | partly |
 | [harnessrouter](harnessrouter/) | Open-source infrastructure layer that standardizes routing and execution of task | CPU only, on the NVIDIA Tesla V100 server | works |
 | [qwopus3.8-27b-coder-flash](qwopus3.8-27b-coder-flash/) | 27B coding and reasoning model fine-tuned on 200K examples with 20K agent intera | 10x NVIDIA Tesla V100 32 GB | works |
+| [llama.cpp](llama.cpp/) | C++ inference engine for LLMs with CPU/GPU support and quantization | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
