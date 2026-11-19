@@ -29,6 +29,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [adcode](adcode/) | iOS/macOS app for running local AI coding models (GLM, Qwen, etc.) without API k | CPU only, on the NVIDIA Tesla V100 server | partly |
 | [ovhcloud-cli](ovhcloud-cli/) | Command-line interface for managing OVHcloud cloud infrastructure and services | CPU only, on the NVIDIA Tesla V100 server | works |
 | [open-scion](open-scion/) | A Git replacement with partial clones, server-side operations, merge features, a | CPU only, on the NVIDIA Tesla V100 server | works |
+| [paranoid-pi](paranoid-pi/) | Privacy-focused LLM daemon wrapper with Tor circuits, cover traffic, zkAPI, and  | CPU only, on the NVIDIA Tesla V100 server | partly |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
