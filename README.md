@@ -16,6 +16,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [ltx-2.3-uncensored](ltx-2.3-uncensored/) | Text-to-video and image-to-video generation model | 1x NVIDIA V100 32 GB | works |
 | [macaq](macaq/) | Open-source quantization tool for LLMs/multimodal models that produces GGUF/vLLM | 1x NVIDIA Tesla V100 32 GB | partly |
 | [rumble-2-flash](rumble-2-flash/) | 0.5B open-weight speech-to-text (Qwen3-ASR fine-tune, arch qwen3_asr) for accent | 1x NVIDIA Tesla V100 32 GB | partly |
+| [esp-mosaico](esp-mosaico/) | GitHub starter repo with MCP/Claude Code/Codex configs and simulator for ESP32-S | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
