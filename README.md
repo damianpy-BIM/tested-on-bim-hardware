@@ -21,6 +21,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [strata-engine](strata-engine/) | LLM inference engine version 0.1.60 with a prefill performance regression on V10 | 1x NVIDIA Tesla V100 32 GB | partly |
 | [gemma-4](gemma-4/) | A local AI model the post suggests running for sensitive company data. | 1x NVIDIA Tesla V100 32 GB | works |
 | [deepseek-v4.1-flash](deepseek-v4.1-flash/) | DeepSeek-V4.1-Flash model quantized to run locally on 12GB GPU | 10x NVIDIA Tesla V100 32 GB | works |
+| [deepseek-v4.1-flash-1017-gsq-rco-coder](deepseek-v4.1-flash-1017-gsq-rco-coder/) | Quantized/pruned 551.9B parameter code generation model compressed to 72.1GB GGU | 10x NVIDIA Tesla V100 32 GB | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
