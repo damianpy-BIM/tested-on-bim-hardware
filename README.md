@@ -18,6 +18,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [rumble-2-flash](rumble-2-flash/) | 0.5B open-weight speech-to-text (Qwen3-ASR fine-tune, arch qwen3_asr) for accent | 1x NVIDIA Tesla V100 32 GB | partly |
 | [esp-mosaico](esp-mosaico/) | GitHub starter repo with MCP/Claude Code/Codex configs and simulator for ESP32-S | CPU only, on the NVIDIA Tesla V100 server | works |
 | [agent-desktop](agent-desktop/) | Agent framework for parallel computer automation across macOS, Windows, and Linu | CPU only, on the NVIDIA Tesla V100 server | works |
+| [strata-engine](strata-engine/) | LLM inference engine version 0.1.60 with a prefill performance regression on V10 | 1x NVIDIA Tesla V100 32 GB | partly |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
