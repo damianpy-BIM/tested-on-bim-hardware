@@ -27,6 +27,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [qwopus3.8-27b-coder-flash](qwopus3.8-27b-coder-flash/) | 27B coding and reasoning model fine-tuned on 200K examples with 20K agent intera | 10x NVIDIA Tesla V100 32 GB | works |
 | [llama.cpp](llama.cpp/) | C++ inference engine for LLMs with CPU/GPU support and quantization | CPU only, on the NVIDIA Tesla V100 server | works |
 | [adcode](adcode/) | iOS/macOS app for running local AI coding models (GLM, Qwen, etc.) without API k | CPU only, on the NVIDIA Tesla V100 server | partly |
+| [ovhcloud-cli](ovhcloud-cli/) | Command-line interface for managing OVHcloud cloud infrastructure and services | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
