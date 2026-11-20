@@ -33,6 +33,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [mercury-agent](mercury-agent/) | Multi-agent orchestration framework with bot coordination, sandboxing, and backg | CPU only, on the NVIDIA Tesla V100 server | works |
 | [claude-code](claude-code/) | Anthropic's CLI coding agent for automated software development | CPU only, on the NVIDIA Tesla V100 server | works |
 | [superfluid](superfluid/) | Inference orchestration layer that prioritizes interactive requests over backgro | CPU only, on the NVIDIA Tesla V100 server | works |
+| [claude-motion](claude-motion/) | Motion graphics framework using Claude Opus 5.5 to generate and validate video f | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
