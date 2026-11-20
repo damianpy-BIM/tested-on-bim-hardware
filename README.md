@@ -51,6 +51,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [obsidian-mind](obsidian-mind/) | Gives AI coding agents (Claude Code, Codex CLI, Gemini CLI) persistent memory vi | CPU only, on the NVIDIA Tesla V100 server | works |
 | [unlimited-ocr](unlimited-ocr/) | 3B-param OCR model that parses 100-page PDFs in one pass with 32K context, multi | 1x NVIDIA Tesla V100 32 GB | cannot-run |
 | [rmux](rmux/) | Rust terminal multiplexer, tmux-compatible, keeps SSH sessions alive, with SDK f | CPU only, on the NVIDIA Tesla V100 server | works |
+| [gortex](gortex/) | Code graph indexer exposed via CLI/MCP/web UI to cut AI coding agent token usage | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
