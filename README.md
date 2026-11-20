@@ -43,6 +43,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [opencode-lora-on-aeon-27b](opencode-lora-on-aeon-27b/) | RL-trained ~300MB LoRA for Qwen3.8-27B optimised for OpenCode, applied at runtim | 1x NVIDIA Tesla V100 32 GB | works |
 | [openworker](openworker/) | Desktop AI coworker that runs locally and produces finished documents (e.g. secu | CPU only, on the NVIDIA Tesla V100 server | partly |
 | [docetl](docetl/) | Python library/CLI for building agentic LLM-powered data processing and ETL pipe | CPU only, on the NVIDIA Tesla V100 server | works |
+| [wicked-tutu-31b-v0.1](wicked-tutu-31b-v0.1/) | 31B uncensored LLM fine-tuned (high-rank LoRA) for dark fiction / unfiltered rol | 1x NVIDIA Tesla V100 32 GB | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
