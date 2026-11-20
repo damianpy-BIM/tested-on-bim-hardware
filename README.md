@@ -48,6 +48,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [termix](termix/) | self-hosted web app for managing SSH connections: terminal, tunnels, snippets, h | CPU only, on the NVIDIA Tesla V100 server | works |
 | [sentrysearch](sentrysearch/) | Semantic search over long video footage: describe a moment in natural language a | 1x NVIDIA Tesla V100 32 GB | works |
 | [minicpm-v-4.7](minicpm-v-4.7/) | 35B-A3B MoE multimodal (vision-language) model for document parsing, sign readin | 1x NVIDIA Tesla V100 32 GB | works |
+| [obsidian-mind](obsidian-mind/) | Gives AI coding agents (Claude Code, Codex CLI, Gemini CLI) persistent memory vi | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
