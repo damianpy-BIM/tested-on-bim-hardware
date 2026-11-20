@@ -39,6 +39,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [hyperframes](hyperframes/) | AI agent video rendering tool that converts HTML animations to MP4 | CPU only, on the NVIDIA Tesla V100 server | works |
 | [agent-reach](agent-reach/) | CLI tool that gives AI agents web scraping and search capabilities across Twitte | CPU only, on the NVIDIA Tesla V100 server | works |
 | [fastframes-l-on-a-16-gb-apple-m4](fastframes-l-on-a-16-gb-apple-m4/) | Apple's open video model, 81 frames at 480p from one model per frame | Apple M4 Mac mini | cannot-run |
+| [fastframes-l](fastframes-l/) | Apple's FastFrames-L model generates videos at interactive latency. | 1x NVIDIA Tesla V100 32 GB | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
