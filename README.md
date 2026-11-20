@@ -53,6 +53,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [rmux](rmux/) | Rust terminal multiplexer, tmux-compatible, keeps SSH sessions alive, with SDK f | CPU only, on the NVIDIA Tesla V100 server | works |
 | [gortex](gortex/) | Code graph indexer exposed via CLI/MCP/web UI to cut AI coding agent token usage | CPU only, on the NVIDIA Tesla V100 server | works |
 | [voicebox](voicebox/) | Local voice cloning + multi-engine TTS app (7 TTS engines, 23 languages, MCP ser | CPU only, on the NVIDIA Tesla V100 server | works |
+| [portable-ai-usb](portable-ai-usb/) | Toolkit/scripts to run large uncensored AI models (likely via llama.cpp) self-co | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
