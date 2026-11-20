@@ -36,6 +36,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [claude-motion](claude-motion/) | Motion graphics framework using Claude Opus 5.5 to generate and validate video f | CPU only, on the NVIDIA Tesla V100 server | works |
 | [ods](ods/) | One-click Local AI platform that detects hardware, downloads appropriate models, | CPU only, on the NVIDIA Tesla V100 server | partly |
 | [tinygrad](tinygrad/) | Minimal machine learning framework/compiler for running models on heterogeneous  | CPU only, on the NVIDIA Tesla V100 server | partly |
+| [hyperframes](hyperframes/) | AI agent video rendering tool that converts HTML animations to MP4 | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
