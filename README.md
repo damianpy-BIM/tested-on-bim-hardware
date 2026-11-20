@@ -41,6 +41,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [fastframes-l-on-a-16-gb-apple-m4](fastframes-l-on-a-16-gb-apple-m4/) | Apple's open video model, 81 frames at 480p from one model per frame | Apple M4 Mac mini | cannot-run |
 | [fastframes-l](fastframes-l/) | Apple's FastFrames-L model generates videos at interactive latency. | 1x NVIDIA Tesla V100 32 GB | works |
 | [opencode-lora-on-aeon-27b](opencode-lora-on-aeon-27b/) | RL-trained ~300MB LoRA for Qwen3.8-27B optimised for OpenCode, applied at runtim | 1x NVIDIA Tesla V100 32 GB | works |
+| [openworker](openworker/) | Desktop AI coworker that runs locally and produces finished documents (e.g. secu | CPU only, on the NVIDIA Tesla V100 server | partly |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
