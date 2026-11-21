@@ -60,6 +60,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [lightpanda](lightpanda/) | headless browser written in Zig, built for AI agents/scraping, faster and lighte | CPU only, on the NVIDIA Tesla V100 server | works |
 | [heretic](heretic/) | Automated tool that abliterates/decensors LLMs (removes refusal behavior) in one | CPU only, on the NVIDIA Tesla V100 server | works |
 | [open-source-2b-tts-zero-shot-voice-clone](open-source-2b-tts-zero-shot-voice-clone/) | 2B-param TTS model with zero-shot voice cloning, 48kHz output, 30+ languages inc | 1x NVIDIA Tesla V100 32 GB | works |
+| [turboquant](turboquant/) | experimental weight-compression mode for LLMs (e.g. shrinks Gemma4 31B from 30.4 | 1x NVIDIA Tesla V100 32 GB | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
