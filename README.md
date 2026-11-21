@@ -68,6 +68,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [superqwen3.8-27b-abliterated](superqwen3.8-27b-abliterated/) | Abliterated/uncensored 27B Qwen3.8-based LLM with fixed weights, 1M context, mul | 1x NVIDIA Tesla V100 32 GB | works |
 | [local-ai-registry-inkling-skill](local-ai-registry-inkling-skill/) | Registry and agent skill that lets any LLM agent set up and run the new 'Inkling | 1x NVIDIA Tesla V100 32 GB | works |
 | [inkling-2-mini](inkling-2-mini/) |  | 1x NVIDIA Tesla V100 32 GB | works |
+| [olala-v1.0-mini-7a1b-ovh](olala-v1.0-mini-7a1b-ovh/) |  | 1x NVIDIA Tesla V100 32 GB | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
