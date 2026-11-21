@@ -70,6 +70,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [inkling-2-mini](inkling-2-mini/) |  | 1x NVIDIA Tesla V100 32 GB | works |
 | [olala-v1.0-mini-7a1b-ovh](olala-v1.0-mini-7a1b-ovh/) |  | 1x NVIDIA Tesla V100 32 GB | works |
 | [ai-watermark-remover](ai-watermark-remover/) | Detects and removes AI watermarks and provenance metadata from images and video | 1x NVIDIA Tesla V100 32 GB | works |
+| [ima2-gen](ima2-gen/) | Local image generation studio with multi-provider support (GPT, Grok, Gemini, No | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
