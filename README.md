@@ -64,6 +64,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [qwen-image-2.1-gguf-uncensored](qwen-image-2.1-gguf-uncensored/) | 7B text-to-image/editing model with GGUF quants, uncensored upstream weights, su | 1x NVIDIA Tesla V100 32 GB | works |
 | [ltx-2.3-uncensored-nsfw-video-gen](ltx-2.3-uncensored-nsfw-video-gen/) | Open video+audio generation model (LTX-2.3 merged with Eros10 NSFW LoRA, DMD dis | 1x NVIDIA Tesla V100 32 GB | works |
 | [voxtral-mini-4b](voxtral-mini-4b/) | Streaming multilingual ASR model (13 languages, <500ms latency) from Mistral AI, | 1x NVIDIA Tesla V100 32 GB | works |
+| [audio8-tts-preview](audio8-tts-preview/) | 0.6B open-weight TTS model with zero-shot voice cloning, 11 languages, bundled 4 | 1x NVIDIA Tesla V100 32 GB | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
