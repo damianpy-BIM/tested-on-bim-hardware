@@ -1,0 +1,11 @@
+{
+  "max_context_window": 524288,
+  "mtp_enabled": true,
+  "is_pinned": false,
+  "is_default": false,
+  "turboquant_kv_enabled": true,
+  "turboquant_kv_scheme": "affine4",
+  "turboquant_kv_bits": 4,
+  "display_name": "Flash-Next oQ2e (2-bit)",
+  "a8_prefill_enabled": false
+}

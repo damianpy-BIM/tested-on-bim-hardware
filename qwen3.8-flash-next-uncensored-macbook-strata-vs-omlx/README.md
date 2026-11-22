@@ -39,6 +39,24 @@ What we read from it:
 
 Correctness, same 11 checks on both engines (`scripts/quality.py`): 4/4 maths, Python code that runs and passes asserts, a tool call, French and Chinese answers, JSON extraction, no refusal on a borderline request. 10/11 on both; the one "miss" is our test's fault (an apples puzzle where 3.5 is a valid answer).
 
+## Quick start: oMLX, ready-made weights (clone and run)
+
+```bash
+git clone https://github.com/damianpy-BIM/tested-on-bim-hardware.git
+cd tested-on-bim-hardware/qwen3.8-flash-next-uncensored-macbook-strata-vs-omlx/omlx
+pip install -U huggingface_hub httpx
+./setup.sh 2        # oQ2e-mtp, 72 GB  (./setup.sh 3 = oQ3e-mtp, 86 GB)
+```
+It downloads the weights, writes the oMLX model settings we use (KV cache 4-bit affine4, MTP speculative decoding on, YaRN x2 to 524,288 tokens, model pinned and default) and prints the two memory settings to set. Needs an Apple Silicon Mac with 128 GB, about 100 GB free disk, and [oMLX 0.8.2](https://github.com/jundot/omlx/releases).
+
+Weights (public, Apache-2.0 like the base model):
+- https://huggingface.co/damianpy/Qwen3.8-Flash-Next-Uncensored-oQ2e-mtp-MLX
+- https://huggingface.co/damianpy/Qwen3.8-Flash-Next-Uncensored-oQ3e-mtp-MLX
+
+Upload still running on 23/11/2026; if a repo is empty or incomplete, build the same files yourself with the steps under "Reproduce it" (`OQ_LEVEL=3` for oQ3e).
+
+Measure on your Mac: `python3 omlx/speed.py <model id> 4096:1:256 131072:1:256` (prefill/decode, skips any prompt that would not fit 108 GB) and `python3 omlx/acc.py <model id> out.jsonl` (MMLU 300, ARC 200, HellaSwag 200, GSM8K 200, oMLX's bundled datasets, run locally).
+
 ## Reproduce it
 
 ### What you need
@@ -89,4 +107,4 @@ python3 scripts/quality.py http://127.0.0.1:8301/v1/chat/completions <model id> 
 - Strata's Metal engine: `--kv int8` failed at start for us once (`kv_block_bytes has no Metal implementation yet`) and worked in a later start; `k8v4` (8-bit K, 4-bit V) always started.
 - Short replies inflate decode figures with speculative decoding: measure with a few hundred tokens.
 
-No weights are shipped here. Code: MIT. Measured on hardware by BIM Computing — https://www.bim-computing.com
+Weights: see the Hugging Face links above. Code: MIT. Measured on hardware by BIM Computing — https://www.bim-computing.com
