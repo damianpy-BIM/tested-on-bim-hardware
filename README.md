@@ -5,6 +5,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 
 | Item | What | Hardware | Verdict |
 |---|---|---|---|
+| [qwen3.8-flash-next-uncensored-macbook-strata-vs-omlx](qwen3.8-flash-next-uncensored-macbook-strata-vs-omlx/) | Uncensored Qwen3.8-Flash-Next rebuilt locally to 2-bit (oMLX oQ2e + Strata Q2_0 GGUF), 512K YaRN, needle 3/3 at 493k | Apple M5 Max MacBook Pro 128 GB | works |
 | [qwen3.5-4b-3d-coders](qwen3.5-4b-3d-coders/) | text -> Three.js 3D asset (GLB) or scene, with a browser check and retry | 1 x NVIDIA V100 32 GB | works (GLB coder), partly (scene coder) |
 | [dsh-superagent](dsh-superagent/) | DeepSeek's prototype GitHub coding agent: build + test suite in a sandbox | 64-thread x86-64 CPU | partly |
 | [metal-capability-layer-for-macos-vms](metal-capability-layer-for-macos-vms/) | Process-scoped Metal capability layer enabling GPU acceleration for AI models on | Apple M5 Max MacBook Pro, macOS guest VM | works |
