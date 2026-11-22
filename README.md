@@ -75,6 +75,7 @@ One folder per item: what it is, the hardware, the measured result (good or not)
 | [hy-memory-30b-a3b](hy-memory-30b-a3b/) | Tencent MoE model specialized in deciding what an AI agent should write to long- | 1x NVIDIA Tesla V100 32 GB | works |
 | [embeddinggemma-2](embeddinggemma-2/) | Google's small open embedding model for local semantic search/RAG, runs in ~0.5G | 1x NVIDIA Tesla V100 32 GB | works |
 | [gemma-diarization-fixer-4b](gemma-diarization-fixer-4b/) | 4B Gemma model fine-tuned to post-process ASR output and fix speaker diarization | 1x NVIDIA Tesla V100 32 GB | works |
+| [rea-reverse-engineer-anything](rea-reverse-engineer-anything/) | Open-source reverse-engineering toolkit for decompiling binaries and tracing exe | CPU only, on the NVIDIA Tesla V100 server | works |
 
 Rules for this repository: figures are measured, never estimated, and come with the hardware, quantisation, engine and context
 they were measured with. Upstream code and weights are linked, not copied, and keep their own licence. Our scripts are MIT.
